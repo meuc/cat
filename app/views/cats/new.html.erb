@@ -1,0 +1,19 @@
+<%= form_for @cat do |f| %>
+	<%= f.label :name, class: "classname" %>
+	<%= f.text_field :name %>
+	
+	<%= f.label :male, class: "classname" %>
+	<%= f.check_box :male %>
+	<p>Uncheck if cat female</p>
+	
+	<%= f.label :birthdate, class: "classname" %>
+	<%= f.date_field :birthdate %>
+	
+	<%= f.label :image_url, class: "classname" %>
+	<%= f.url_field :image_url %>
+	
+	<%= f.label :description, class: "classname" %>
+	<%= f.text_area :description %>
+	
+	<%= f.submit %>
+<% end %>

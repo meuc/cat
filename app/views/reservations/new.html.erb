@@ -1,0 +1,11 @@
+<%= form_for [@cat, @reservation] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	
+	<%= f.label :email %>
+	<%= f.email_field :email %>
+	
+	<%= f.label :starts_at %>
+	<%= f.select :starts_at, @cat.open_slots(Date.today).map { |slot| ["#{slot.starts_at} - #{slot.ends_at}", slot.starts_at] }, include_blank: true %>
+	
+<% end %>

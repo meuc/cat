@@ -1,0 +1,9 @@
+<% if @cats.present? %>
+	<ul>
+	<% @cats.each do |cat| %>
+		<li><%= link_to cat.name, cat %></li>
+	<% end%>
+	</ul>
+<% else %>
+	<p> There are no cats yet.</p>
+<% end %>
