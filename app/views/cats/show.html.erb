@@ -1,8 +1,25 @@
 <h2><%= @cat.name %></h2>
 
+<div class="single-cat-wrapper">
+
+	<div class="cat-picture"></div>
+	<div class="single-cat-info">
+		<p><b>Gender:</b> 
+			<% if @cat.male %>
+				<i class="fa fa-mars" aria-hidden="true"></i>
+			<% else  %>
+				<i class="fa fa-venus" aria-hidden="true"></i>
+			<% end  %>
+		</p>
+		<p><b>Birthday:</b> <%= @cat.birthdate.strftime("%B %d, %Y") %></p>
+		<p><b>Description:</b> <%= @cat.description %></p>
+	</div>
+
+</div>
+<div>
 <%= link_to "Edit", edit_cat_path(@cat) %> | 
 <%= link_to "Delete", @cat, method: :delete %>
-
+</div>
 <br>
 
-<%= link_to "Book", new_cat_reservation_path(@cat) %>
+<%= link_to "Book", new_cat_reservation_path(@cat), class: "btn btn-primary btn-lg" %>

@@ -65,29 +65,38 @@ body {
 			margin-top: 0;
 			display: inline;
 		}
-		
-		.cat-picture {
-			width: 150px;
-			height: 150px;
-			background: grey;
-		}
-		
-		.btn-primary {
-			background: $accentColor;
-			border: none;
-			color: $muteColor;
-		}
 	}
-	
 }
 
+.cat-picture {
+	width: 150px;
+	height: 150px;
+	background: grey;
+}
+
+.single-cat-wrapper {
+	display: flex;
+	.cat-picture {
+		margin: 0 1rem 1rem 0;
+	}
+}
+
+// General
 
 h1, h2 {
 	color: $accentColor;
 	border-bottom: 1px dashed $accentColor;
 }
 
+.btn-primary {
+	background: $accentColor;
+	border: none;
+	color: $muteColor;
+}
 
+b {
+	color: $accentColor;
+}
 
 
 
