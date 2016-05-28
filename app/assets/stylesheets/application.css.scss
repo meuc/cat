@@ -60,6 +60,9 @@ body {
 	
 	.catalog-cat {
 		margin: 1rem;
+		width: 180px;
+//		max-height: 300px;
+//		overflow: hidden;
 		
 		h3 {
 			margin-top: 0;
@@ -69,8 +72,8 @@ body {
 }
 
 .cat-picture {
-	width: 150px;
-	height: 150px;
+	width: 180px;
+	height: 180px;
 	background: grey;
 }
 
@@ -82,7 +85,6 @@ body {
 }
 
 // General
-
 h1, h2 {
 	color: $accentColor;
 	border-bottom: 1px dashed $accentColor;
@@ -97,8 +99,6 @@ h1, h2 {
 b {
 	color: $accentColor;
 }
-
-
 
 // Helper classes
 .right {
