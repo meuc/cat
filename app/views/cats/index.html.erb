@@ -1,9 +1,25 @@
+<h2>Catalog <i class="fa fa-paw" aria-hidden="true"></i></h2>
+<p>Here you can browse through all our available cat and find your perfect buddy!</p>
+
 <% if @cats.present? %>
-	<ul>
+	<div class="catalog">
 	<% @cats.each do |cat| %>
-		<li><%= link_to cat.name, cat %></li>
+		<div class="catalog-cat">
+			<div class="cat-picture"></div>
+			<h3><%= link_to cat.name, cat %></h3>
+			
+				<span class="right">
+					<% if cat.male %>
+						<i class="fa fa-mars" aria-hidden="true"></i>
+					<% else  %>
+						<i class="fa fa-venus" aria-hidden="true"></i>
+					<% end  %>
+				</span>
+			<p><%= cat.description %></p>
+			<%= link_to "Book", new_cat_reservation_path(cat), class: "btn btn-primary" %>
+		</div>
 	<% end%>
-	</ul>
+</div>
 <% else %>
 	<p> There are no cats yet.</p>
 <% end %>

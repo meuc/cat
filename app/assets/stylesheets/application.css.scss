@@ -54,7 +54,35 @@ body {
 	}
 }
 
-h1 {
+.catalog {
+	display: flex;
+	flex-wrap: wrap;
+	
+	.catalog-cat {
+		margin: 1rem;
+		
+		h3 {
+			margin-top: 0;
+			display: inline;
+		}
+		
+		.cat-picture {
+			width: 150px;
+			height: 150px;
+			background: grey;
+		}
+		
+		.btn-primary {
+			background: $accentColor;
+			border: none;
+			color: $muteColor;
+		}
+	}
+	
+}
+
+
+h1, h2 {
 	color: $accentColor;
 	border-bottom: 1px dashed $accentColor;
 }
