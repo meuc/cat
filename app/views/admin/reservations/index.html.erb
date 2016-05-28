@@ -1,0 +1,10 @@
+<% @reversations_on_dates.each do |date, reservations| %>
+	<h1><%= date %></h1>
+	<ul>
+		<% reservations.each do |reservation| %>
+			<li>
+				<%= reservation.cat.name %> is reserved by <%= reservation.name %> from <%= reservation.starts_at %> to <%= reservation.ends_at %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>

@@ -1,6 +1,4 @@
 class CatsController < ApplicationController
-  http_basic_authenticate_with name: "catlover", password: "123", except: [:index, :show]
-  
   def index
     @cats = Cat.all
   end
@@ -47,8 +45,3 @@ class CatsController < ApplicationController
     redirect_to cats_path
   end
 end
-
-
-
-
-
