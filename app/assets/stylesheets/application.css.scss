@@ -2,3 +2,71 @@
  *= require_tree .
  *= require_self
  */
+
+$primaryColor: #333;
+$accentColor: #de5a51;
+$muteColor: #f2f1ed;
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+	color: $primaryColor;
+	background: $muteColor;
+}
+
+.navbar-brand {
+	background: #e7e7e7;
+}
+
+.container {
+	padding: 1rem;
+	width: calc(100% - 220px);
+	margin: 1rem;
+	margin-left: 5rem;
+}
+
+.logo {
+	width: 100px;
+	margin: 1rem;
+}
+
+.intro-text-wrap {
+	p:last-child {
+		text-align: right;
+	}
+}
+
+.comic-of-the-week {
+	width: 130px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+	img {
+		width: 100%;
+	}
+	
+	h6 {
+		padding: 3px;
+		text-align: center;
+		color: $accentColor;
+	}
+}
+
+h1 {
+	color: $accentColor;
+	border-bottom: 1px dashed $accentColor;
+}
+
+
+
+
+
+// Helper classes
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}

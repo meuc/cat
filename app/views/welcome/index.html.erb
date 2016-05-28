@@ -1,3 +1,27 @@
-<h1>Welcome#index</h1>
+<h1>Welcome to CatMe!</h1>
 
-<img src="<%= @comic["img"] %>">
+
+<h3>Feeling lonely and sad? Need some cuddles and kitty lovings?</h3>
+
+<h4>Here you can book some time with one of our feline care takers.</h4>
+
+<div class="intro-text-wrap">
+<p>"Pets offer an unconditional love that can be very helpful to people with depression," says Ian Cook, MD, a psychiatrist and director of the Depression Research and Clinic Program at UCLA.</p>
+
+<p>Studies show that people feel better when they have physical contact with others. Pets offer something similar. There's something naturally soothing about petting a cat on your lap.</p>
+
+<p>They help you cope. Cats have been shown to help people get over their loss more quickly, and show less physical symptoms of pain, like crying. Depression can isolate you. It can make you pull back from your friends and loved ones. Despite the fact that they are only animals, cats serve as a social support during difficult times.</p>
+
+<p>Cats in particular also lower your stress level and lower the amount of anxiety in your life. Petting a cat has a positive calming effect.</p>
+
+<br>
+<p>Browse through our cats <%= link_to "here", cats_path %>.</p>
+
+</div>
+
+<div class="comic-of-the-week">
+	<h6>Have a tiny Cheer-Up <br> - Comic of the Week</h6>
+	<img src="<%= @comic["img"] %>">
+</div>
+
+
