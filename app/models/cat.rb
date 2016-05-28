@@ -1,5 +1,6 @@
 class Cat < ActiveRecord::Base
   has_many :reservations
+  
   def open_slots(date)
     time = date.to_time
     
@@ -17,7 +18,7 @@ class Cat < ActiveRecord::Base
     end
     
     slots.reject do |slot|
-      Reservation.exists?(cat: self, starts_at: slot.starts_at)
+      Reservation.exists?(cat: self, starts_at: slot.starts_at) || slot.starts_at.past?
     end
   end
 end

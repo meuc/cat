@@ -15,13 +15,6 @@ class CatTest < ActiveSupport::TestCase
     end    
   end
   
-  test "returns 48 open slots for a completely open day" do
-    cat = Cat.new(name: "Cat", male: false, birthdate: Date.today)
-    slots = cat.open_slots(Date.today)
-    
-    assert_equal 48, slots.count
-  end
-  
   test "only returns slots starting on the given date" do
     cat = Cat.new(name: "Cat", male: false, birthdate: Date.today)
     slots = cat.open_slots(Date.today)
@@ -61,5 +54,12 @@ class CatTest < ActiveSupport::TestCase
     open_slots = cat.open_slots(Date.today)
     
     assert_equal 0, open_slots.count
+  end
+  
+  test "doesn't return slots that are in the past" do
+    cat = Cat.new(name: "Cat", male: false, birthdate: Date.today)
+    slots = cat.open_slots(Date.today)
+    
+    assert slots.map(&:starts_at).none?(&:past?)
   end
 end
