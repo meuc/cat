@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160527231946) do
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "cat_id",     null: false
-    t.datetime "}",  null: false
+    t.datetime "starts_at",  null: false
     t.string   "name",       null: false
     t.string   "email",      null: false
     t.datetime "created_at", null: false

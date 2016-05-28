@@ -11,14 +11,17 @@
 				<i class="fa fa-venus" aria-hidden="true"></i>
 			<% end  %>
 		</p>
-		<p><b>Birthday:</b> <%= @cat.birthdate.strftime("%B %d, %Y") %></p>
+	  <p>
+			<b>Birthday:</b>
+			<% if @cat.birthdate.present? %>
+				<%= @cat.birthdate.strftime("%B %d, %Y") %>
+			<% else %>
+			  Unknown
+			<% end %>
+		</p>
 		<p><b>Description:</b> <%= @cat.description %></p>
 	</div>
 
-</div>
-<div>
-<%= link_to "Edit", edit_cat_path(@cat) %> | 
-<%= link_to "Delete", @cat, method: :delete %>
 </div>
 <br>
 

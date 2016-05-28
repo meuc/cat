@@ -1,5 +1,7 @@
 class Cat < ActiveRecord::Base
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
+  
+  validates :name, :male, presence: true
   
   def open_slots(date)
     time = date.to_time
