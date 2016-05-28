@@ -1,19 +1,26 @@
 <%= form_for @cat do |f| %>
-	<%= f.label :name, class: "classname" %>
-	<%= f.text_field :name %>
-	
-	<%= f.label :male, class: "classname" %>
+<div class="form-group">
+	<%= f.label :name%>
+	<%= f.text_field :name, class: "form-control" %>
+</div>
+
+<div>
+	<%= f.label :male, "Male?"%><br>
 	<%= f.check_box :male %>
-	<p>Uncheck if cat female</p>
-	
-	<%= f.label :birthdate, class: "classname" %>
-	<%= f.date_field :birthdate %>
-	
-	<%= f.label :image_url, class: "classname" %>
-	<%= f.url_field :image_url %>
-	
-	<%= f.label :description, class: "classname" %>
-	<%= f.text_area :description %>
-	
-	<%= f.submit %>
+	<span>Uncheck if cat female</span>
+</div>
+	<br>
+<div class="form-group">	
+	<%= f.label :birthdate%>
+	<%= f.date_field :birthdate, class: "form-control" %>
+</div>
+<div class="form-group">	
+	<%= f.label :image_url%>
+	<%= f.url_field :image_url, class: "form-control" %>
+</div>
+<div class="form-group">	
+	<%= f.label :description%>
+	<%= f.text_area :description, class: "form-control" %>
+</div>	
+	<%= f.submit :class => 'btn btn-primary btn-lg' %>
 <% end %>
