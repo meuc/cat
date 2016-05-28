@@ -1,11 +1,19 @@
+<h3>You chose to book an appointment with <%= @cat.name %></h3>
+<p>Put in your credentials and choose the time that best suites you.<br>Payment upon arrival (150kr. per appointment)</p>
+
 <%= form_for [@cat, @reservation] do |f| %>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
-	
-	<%= f.label :email %>
-	<%= f.email_field :email %>
-	
-	<%= f.label :starts_at %>
-	<%= f.select :starts_at, @cat.open_slots(Date.today).map { |slot| ["#{slot.starts_at} - #{slot.ends_at}", slot.starts_at] }, include_blank: true %>
-	
+<div class="form-group">
+	<%= f.label :name, "Your name" %>
+	<%= f.text_field :name, class: "form-control" %>
+</div>
+<div class="form-group">
+	<%= f.label :email, "Your email" %>
+	<%= f.email_field :email, class: "form-control" %>
+</div>
+<div class="form-group">	
+	<%= f.label :starts_at, "Time" %>
+	<%= f.select :starts_at, @cat.open_slots(Date.today).map { |slot| ["#{slot.starts_at.strftime('%d/%m/%Y, %H:%M ')}", slot.starts_at] }, { include_blank: true }, { class: "form-control" } %>
+	<span>Every appointment is 30 minutes.</span>
+</div>
+	<%= f.submit :class => 'btn btn-primary btn-lg' %>	
 <% end %>
