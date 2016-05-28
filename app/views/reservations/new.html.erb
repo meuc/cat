@@ -2,18 +2,30 @@
 <p>Put in your credentials and choose the time that best suites you.<br>Payment upon arrival (150kr. per appointment)</p>
 
 <%= form_for [@cat, @reservation] do |f| %>
-<div class="form-group">
-	<%= f.label :name, "Your name" %>
-	<%= f.text_field :name, class: "form-control" %>
-</div>
-<div class="form-group">
-	<%= f.label :email, "Your email" %>
-	<%= f.email_field :email, class: "form-control" %>
-</div>
-<div class="form-group">	
-	<%= f.label :starts_at, "Time" %>
-	<%= f.select :starts_at, @cat.open_slots(Date.today).map { |slot| ["#{slot.starts_at.strftime('%d/%m/%Y, %H:%M ')}", slot.starts_at] }, { include_blank: true }, { class: "form-control" } %>
-	<span>Every appointment is 30 minutes.</span>
-</div>
+	<div class="form-group">
+		<%= f.label :name, "Your name" %>
+		<%= f.text_field :name, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :email, "Your email" %>
+		<%= f.email_field :email, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<input type="date" class="time-slots-date" data-cat-id="<%= @cat.id %>">
+	</div>
+
+	<div class="form-group">	
+		<%= f.label :starts_at, "Time" %>
+
+		<%= f.select(
+			:starts_at,
+			@cat.open_slots_for_select(Date.today),
+			{ include_blank: true },
+			{ class: "form-control time-slot-select" }
+		) %>
+		<span>Every appointment is 30 minutes.</span>
+	</div>
+
 	<%= f.submit :class => 'btn btn-primary btn-lg' %>	
 <% end %>

@@ -21,4 +21,10 @@ class Cat < ActiveRecord::Base
       Reservation.exists?(cat: self, starts_at: slot.starts_at) || slot.starts_at.past?
     end
   end
+  
+  def open_slots_for_select(date)
+    open_slots(date).map do |slot|
+      ["#{slot.starts_at.strftime('%d/%m/%Y, %H:%M ')}", slot.starts_at]
+    end
+  end
 end

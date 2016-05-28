@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   
   resources :cats do 
     resources :reservations, only: [:create, :new]
+    resources :open_slots, only: [:show], param: :date
   end
 end
