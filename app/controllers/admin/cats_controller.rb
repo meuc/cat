@@ -9,7 +9,6 @@ module Admin
     end
     
     def create
-      cat_params = params.require(:cat).permit(:name, :male, :birthdate, :image_url, :description)
       @cat = Cat.new(cat_params)
     
       if @cat.save
@@ -25,7 +24,6 @@ module Admin
     end
     
     def update
-      cat_params = params.require(:cat).permit(:name, :male, :birthdate, :image_url, :description)
       @cat = Cat.find(params[:id])
     
       if @cat.update(cat_params)
@@ -40,6 +38,18 @@ module Admin
       cat = Cat.find(params[:id])
       cat.destroy
       redirect_to cats_path
+    end
+    
+    private
+    
+    def cat_params
+      params.require(:cat).permit(
+        :name,
+        :male,
+        :birthdate,
+        :picture,
+        :description
+      )
     end
   end
 end

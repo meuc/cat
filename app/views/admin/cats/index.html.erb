@@ -3,7 +3,8 @@
 <ul>
 	<% @cats.each do |cat| %>
 	<li>
-		<!-- picture -->
+		<div class="cat-picture cat-pic-small" style="background: url('<%= cat.picture.url %>') no-repeat center center;"></div>
+		
 		<%= link_to cat.name, cat %>
 		<%= link_to "Edit", edit_admin_cat_path(cat) %> | 
 		<%= link_to "Delete", [:admin, cat], method: :delete, data: { confirm: "Sure?" } %>

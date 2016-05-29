@@ -4,15 +4,16 @@ class CatTest < ActiveSupport::TestCase
   test "create valid cat" do
     cat = Cat.new(name: "Cat", male: false, birthdate: Date.today)
     cat.save
+
     assert_equal 1, Cat.count
   end
   
   test "create invalid, nameless cat" do
     cat = Cat.new(male: true, birthdate: Date.today)
     
-    assert_raise ActiveRecord::StatementInvalid do
-      cat.save
-    end    
+    cat.save
+    
+    assert_equal 0, Cat.count
   end
   
   test "only returns slots starting on the given date" do
@@ -24,7 +25,7 @@ class CatTest < ActiveSupport::TestCase
   end
   
   test "last slot ends on midnight of the next day" do
-    cat = Cat.new(name: "Cat", male: false, birthdate: Date.today)
+    cat = Cat.create!(name: "Cat", male: false, birthdate: Date.today)
     slots = cat.open_slots(Date.today)
     last_slot = slots.last
     
@@ -32,7 +33,7 @@ class CatTest < ActiveSupport::TestCase
   end
   
   test "making reservations" do
-    cat = Cat.new(name: "Cat", male: false, birthdate: Date.today)
+    cat = Cat.create!(name: "Cat", male: false, birthdate: Date.today)
     slot = cat.open_slots(Date.today).first
     
     reservation = slot.reserve(name: "David", email: "david@example.com")
@@ -46,7 +47,7 @@ class CatTest < ActiveSupport::TestCase
   end
   
   test "doesn't return slots that are reserved" do
-    cat = Cat.new(name: "Cat", male: false, birthdate: Date.today)
+    cat = Cat.create!(name: "Cat", male: false, birthdate: Date.today)
     cat.open_slots(Date.today).each do |slot|
       slot.reserve(name: "David", email: "david@example.com")
     end
@@ -57,7 +58,7 @@ class CatTest < ActiveSupport::TestCase
   end
   
   test "doesn't return slots that are in the past" do
-    cat = Cat.new(name: "Cat", male: false, birthdate: Date.today)
+    cat = Cat.create!(name: "Cat", male: false, birthdate: Date.today)
     slots = cat.open_slots(Date.today)
     
     assert slots.map(&:starts_at).none?(&:past?)

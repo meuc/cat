@@ -78,8 +78,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   ActionMailer::Base.smtp_settings = {
-    :user_name => 'm3uc',
-    :password => '',
+    :user_name => ENV.fetch("sendgrid_username"),
+    :password => ENV.fetch("sendgrid_password"),
     :domain => 'http://catme.eu-gb.mybluemix.net/',
     :address => 'smtp.sendgrid.net',
     :port => 587,

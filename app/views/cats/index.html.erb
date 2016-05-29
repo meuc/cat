@@ -5,7 +5,9 @@
 	<div class="catalog">
 	<% @cats.each do |cat| %>
 		<div class="catalog-cat">
-			<div class="cat-picture"></div>
+			
+			<div class="cat-picture" style="background: url('<%= cat.picture.url %>') no-repeat center center;"></div>
+			
 			<h3><%= link_to cat.name, cat %></h3>
 			
 				<span class="right">
@@ -15,9 +17,7 @@
 						<i class="fa fa-venus" aria-hidden="true"></i>
 					<% end  %>
 				</span>
-			<p><%= cat.description %></p>
-			<p class="read-more"><a href="#" class="button">Read More</a></p>
-			
+			<p><%= cat.description %></p>			
 			<%= link_to "Book", new_cat_reservation_path(cat), class: "btn btn-primary" %>
 		</div>
 	<% end%>

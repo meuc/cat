@@ -50,3 +50,4 @@ gem 'rails_12factor', group: :production
 gem 'rest-client'
 
 gem 'font-awesome-sass'
+gem "paperclip", "~> 4.3"

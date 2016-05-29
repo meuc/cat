@@ -11,16 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527231946) do
+ActiveRecord::Schema.define(version: 20160529204127) do
 
   create_table "cats", force: :cascade do |t|
-    t.string   "name",                       null: false
-    t.boolean  "male",        default: true, null: false
+    t.string   "name",                                null: false
+    t.boolean  "male",                 default: true, null: false
     t.date     "birthdate"
-    t.text     "image_url"
     t.text     "description"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "reservations", force: :cascade do |t|

@@ -1,0 +1,27 @@
+<%= form_for [:admin, cat], :html => { :multipart => true } do |f| %>
+  <div class="form-group">
+  	<%= f.label :name%>
+  	<%= f.text_field :name, class: "form-control" %>
+  </div>
+  
+  <div>
+  	<%= f.label :male, "Male?"%><br>
+  	<%= f.check_box :male %>
+  	<span>Uncheck if cat female</span>
+  </div>
+  	<br>
+  <div class="form-group">	
+  	<%= f.label :birthdate%>
+  	<%= f.date_field :birthdate, class: "form-control" %>
+  </div>
+  <div class="form-group">	
+  	<%= f.label :picture %>
+  	<%= f.file_field :picture, class: "form-control" %>
+  </div>
+  <div class="form-group">	
+  	<%= f.label :description%>
+  	<%= f.text_area :description, class: "form-control" %>
+  </div>	
+	
+  <%= f.submit :class => 'btn btn-primary btn-lg' %>
+<% end %>

@@ -2,7 +2,8 @@
 
 <div class="single-cat-wrapper">
 
-	<div class="cat-picture"></div>
+	<div class="cat-picture" style="background: url('<%= @cat.picture.url %>') no-repeat center center;"></div>
+	
 	<div class="single-cat-info">
 		<p><b>Gender:</b> 
 			<% if @cat.male %>
