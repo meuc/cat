@@ -92,6 +92,26 @@ body {
 	}
 }
 
+.dashboard-wrap {
+	a {
+		background: $accentColor;
+		color: $muteColor;
+		margin: 1rem;
+	}
+}
+
+.admin-cat-list {
+	list-style: none;
+	
+	.name {
+		font-size: 4rem;
+	}
+	
+	.btn {
+		margin-top: -2rem;
+	}
+}
+
 // General
 h1, h2 {
 	color: $accentColor;

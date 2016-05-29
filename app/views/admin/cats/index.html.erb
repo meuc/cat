@@ -1,13 +1,13 @@
 <!--rememebr new cat -->
 <% if @cats.present? %>
-<ul>
+<ul class="admin-cat-list">
 	<% @cats.each do |cat| %>
 	<li>
 		<div class="cat-picture cat-pic-small" style="background: url('<%= cat.picture.url %>') no-repeat center center;"></div>
 		
-		<%= link_to cat.name, cat %>
-		<%= link_to "Edit", edit_admin_cat_path(cat) %> | 
-		<%= link_to "Delete", [:admin, cat], method: :delete, data: { confirm: "Sure?" } %>
+		<%= link_to cat.name, cat, class: "name" %>
+		<%= link_to "Edit", edit_admin_cat_path(cat), class: "btn btn-default" %>
+		<%= link_to "Delete", [:admin, cat], method: :delete, data: { confirm: "Sure?" }, class: "btn btn-default" %>
 	</li>
 	<% end %>
 	

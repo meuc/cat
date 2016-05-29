@@ -3,7 +3,7 @@
 	<ul>
 		<% reservations.each do |reservation| %>
 			<li>
-				<%= reservation.cat.name %> is reserved by <%= reservation.name %> from <%= reservation.starts_at %> to <%= reservation.ends_at %>
+				<%= reservation.cat.name %> is reserved by <%= reservation.name %> from <%= reservation.starts_at.strftime('%d/%m/%Y, %H:%M ') %> to <%= reservation.ends_at.strftime('%H:%M ') %>
 			</li>
 		<% end %>
 	</ul>

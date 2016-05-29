@@ -11,7 +11,10 @@
 </head>
 <body>
 	<% if flash.notice.present? %>
-		<div class="flash"><%= flash.notice %></div>
+		<div class="alert alert-success alert-dismissible" role="alert">
+		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  <%= flash.notice %>
+		</div>
 	<% end %>
 	
 	<nav class="navbar navbar-default">
@@ -30,6 +33,10 @@
 	      <ul class="nav navbar-nav">
 	        <li><%= link_to "Catalog", cats_path %></li>
 	        <li><%= link_to "Home", root_path %></li>
+	      </ul>
+				
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><%= link_to "Admin", admin_path %></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->

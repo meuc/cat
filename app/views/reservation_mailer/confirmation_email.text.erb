@@ -1,5 +1,3 @@
 Thank you for your reservation!
 
-See you 
-
-<%= @reservation.starts_at %>
+See you <%= @reservation.starts_at.strftime('%d/%m/%Y, %H:%M ') %>.
