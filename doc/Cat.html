@@ -87,6 +87,8 @@
 
   <section class="description">
     
+<p>test comment</p>
+
   </section>
 
   
@@ -127,7 +129,7 @@
 
           
           <div class="method-source-code" id="open_slots-source">
-            <pre><span class="ruby-comment"># File app/models/cat.rb, line 9</span>
+            <pre><span class="ruby-comment"># File app/models/cat.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">open_slots</span>(<span class="ruby-identifier">date</span>)
   <span class="ruby-identifier">time</span> = <span class="ruby-identifier">date</span>.<span class="ruby-identifier">to_time</span>
   
@@ -177,7 +179,7 @@
 
           
           <div class="method-source-code" id="open_slots_for_select-source">
-            <pre><span class="ruby-comment"># File app/models/cat.rb, line 30</span>
+            <pre><span class="ruby-comment"># File app/models/cat.rb, line 31</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">open_slots_for_select</span>(<span class="ruby-identifier">date</span>)
   <span class="ruby-identifier">open_slots</span>(<span class="ruby-identifier">date</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">slot</span><span class="ruby-operator">|</span>
     [<span class="ruby-node">&quot;#{slot.starts_at.strftime(&#39;%d/%m/%Y, %H:%M &#39;)}&quot;</span>, <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">starts_at</span>]

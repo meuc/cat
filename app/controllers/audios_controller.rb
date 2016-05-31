@@ -1,4 +1,5 @@
 class AudiosController < ApplicationController
+  # Render audio from description
   def show
     @cat = Cat.find(params[:cat_id])
     @path = "#{@cat.id}-cat.wav"

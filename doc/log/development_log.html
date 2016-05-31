@@ -42073,6 +42073,254 @@ for ::1 at 2016-05-31 14:29:43 +0200</p>
 <p>Started GET
 “/assets/logo-9c7c0346d647edab759e201bb27cf2916cb3ab37a9c08a3b20fe627d5f1d3ca1.png”
 for ::1 at 2016-05-31 14:29:43 +0200</p>
+
+<p>Started GET “/cats/1-cat.wav” for ::1 at 2016-05-31 14:47:17 +0200
+Processing by <a
+href="../CatsController.html#method-i-show">CatsController#show</a> as</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;1-cat&quot;}
+[1m[35mCat Load (0.1ms)[0m  SELECT  &quot;cats&quot;.* FROM &quot;cats&quot; WHERE &quot;cats&quot;.&quot;id&quot; = ? LIMIT 1  [[&quot;id&quot;, 1]]
+Rendered cats/show.html.erb within layouts/application (0.7ms)</pre>
+
+<p>Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.1ms)</p>
+
+<p>Started GET
+“/assets/audios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/application.self-21b3e4dfd10cb15392569c7f0a84e8ee868cd861142fe3c31c6f6ef2f83126e4.css?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/audios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/application.self-6b68e98faba0d7048928db2ef50ebb7cd966ae797bcaa8a52c5791b999ff8e71.js?body=1”
+for ::1 at 2016-05-31 14:47:17 +0200</p>
+
+<p>Started GET
+“/assets/logo-9c7c0346d647edab759e201bb27cf2916cb3ab37a9c08a3b20fe627d5f1d3ca1.png”
+for ::1 at 2016-05-31 14:47:18 +0200</p>
+
+<p>Started GET “/doc” for ::1 at 2016-05-31 14:47:24 +0200</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/doc”):</p>
+
+<pre>actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.0) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.0) lib/rails/application.rb:164:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.2ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.7ms)</pre>
+
+<p>Started GET “/doc/” for ::1 at 2016-05-31 14:47:33 +0200</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/doc”):</p>
+
+<pre>actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.0) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.0) lib/rails/application.rb:164:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.7ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.1ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.8ms)</pre>
+
+<p>Started GET “/doc/index.html” for ::1 at 2016-05-31 14:48:57 +0200</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/doc/index.html”):</p>
+
+<pre>actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.0) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.0) lib/rails/application.rb:164:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.1ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (135.5ms)</pre>
+
+<p>Started GET “/doc/index.html” for ::1 at 2016-05-31 14:49:21 +0200</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>ActionController::RoutingError (No route matches [GET] “/doc/index.html”):</p>
+
+<pre>actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch&#39;
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged&#39;
+activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged&#39;
+railties (4.2.0) lib/rails/rack/logger.rb:20:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call&#39;
+rack (1.6.4) lib/rack/methodoverride.rb:22:in `call&#39;
+rack (1.6.4) lib/rack/runtime.rb:18:in `call&#39;
+activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call&#39;
+rack (1.6.4) lib/rack/sendfile.rb:113:in `call&#39;
+railties (4.2.0) lib/rails/engine.rb:518:in `call&#39;
+railties (4.2.0) lib/rails/application.rb:164:in `call&#39;
+rack (1.6.4) lib/rack/lock.rb:17:in `call&#39;
+rack (1.6.4) lib/rack/content_length.rb:15:in `call&#39;
+rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run&#39;
+/Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread&#39;
+
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.2ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.9ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.5ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (80.1ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+Rendered /Users/mariecrabit/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (172.4ms)</pre>
 </main>
 
 

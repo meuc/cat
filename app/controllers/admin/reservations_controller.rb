@@ -1,5 +1,6 @@
 module Admin
   class ReservationsController < AdminController
+    # Show all future cat reservations
     def index
       @reversations_on_dates = Reservation
         .where("starts_at > ?", Date.yesterday)

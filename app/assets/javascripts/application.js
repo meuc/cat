@@ -3,8 +3,8 @@
 //= require turbolinks
 //= require_tree .
 
+// Display available time slots according to chosen day
 $(function() {
-	
 	$(document).on("change", ".time-slots-date", function() {
 		var catId = $(this).attr("data-cat-id");
 
