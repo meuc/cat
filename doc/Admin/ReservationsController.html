@@ -119,13 +119,13 @@
 
         <div class="method-description">
           
-          
+          <p>Show all future cat reservations</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/admin/reservations_controller.rb, line 3</span>
+            <pre><span class="ruby-comment"># File app/controllers/admin/reservations_controller.rb, line 4</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@reversations_on_dates</span> = <span class="ruby-constant">Reservation</span>
     .<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;starts_at &gt; ?&quot;</span>, <span class="ruby-constant">Date</span>.<span class="ruby-identifier">yesterday</span>)

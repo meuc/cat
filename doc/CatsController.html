@@ -121,13 +121,13 @@
 
         <div class="method-description">
           
-          
+          <p>Display all cats</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/cats_controller.rb, line 2</span>
+            <pre><span class="ruby-comment"># File app/controllers/cats_controller.rb, line 3</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@cats</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -154,13 +154,13 @@
 
         <div class="method-description">
           
-          
+          <p>Display individual cat</p>
           
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/cats_controller.rb, line 6</span>
+            <pre><span class="ruby-comment"># File app/controllers/cats_controller.rb, line 8</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 <span class="ruby-keyword">end</span></pre>

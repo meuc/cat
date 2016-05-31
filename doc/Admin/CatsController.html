@@ -129,13 +129,13 @@
 
         <div class="method-description">
           
-          
+          <p>Create a new cat</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">cat_params</span>)
 
@@ -169,13 +169,13 @@
 
         <div class="method-description">
           
-          
+          <p>Delete cat</p>
           
           
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 37</span>
+            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 44</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
   <span class="ruby-identifier">cat</span>.<span class="ruby-identifier">destroy</span>
@@ -204,13 +204,13 @@
 
         <div class="method-description">
           
-          
+          <p>Render edit cat template</p>
           
           
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 27</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
   <span class="ruby-ivar">@cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 <span class="ruby-keyword">end</span></pre>
@@ -237,13 +237,13 @@
 
         <div class="method-description">
           
-          
+          <p>Display all cats</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 3</span>
+            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@cats</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -270,13 +270,13 @@
 
         <div class="method-description">
           
-          
+          <p>Render cat creation template</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -303,13 +303,13 @@
 
         <div class="method-description">
           
-          
+          <p>Update cat&#39;s information</p>
           
           
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 26</span>
+            <pre><span class="ruby-comment"># File app/controllers/admin/cats_controller.rb, line 32</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 

@@ -119,13 +119,13 @@
 
         <div class="method-description">
           
-          
+          <p>Render currect available timeslots according to chosen cat and day</p>
           
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/open_slots_controller.rb, line 2</span>
+            <pre><span class="ruby-comment"># File app/controllers/open_slots_controller.rb, line 3</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-identifier">cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:cat_id</span>])
   <span class="ruby-identifier">date</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:date</span>])

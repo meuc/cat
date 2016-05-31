@@ -121,26 +121,26 @@
 
         <div class="method-description">
           
-          
+          <p>Create a new cat reservation</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/reservations_controller.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/controllers/reservations_controller.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
-  <span class="ruby-comment"># {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;3CMooEla+vsD+XdZSK3PmnH/DbdvRFrRDRYlLyVZqdVe+VSsw6Ogxuk4FjUsvlteJo0/zg+esOL4Tbfhweucsg==&quot;, &quot;reservation&quot;=&gt;{&quot;name&quot;=&gt;&quot;Marie Crabit&quot;, &quot;email&quot;=&gt;&quot;mar.rie.cra@gmail.com&quot;, &quot;starts_at&quot;=&gt;&quot;2016-05-29 02:00:00 +0200&quot;}, &quot;commit&quot;=&gt;&quot;Create Reservation&quot;, &quot;cat_id&quot;=&gt;&quot;5&quot;}</span>
   <span class="ruby-identifier">cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:cat_id</span>])
   
   <span class="ruby-identifier">reservation_params</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:reservation</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:name</span>, <span class="ruby-value">:email</span>, <span class="ruby-value">:starts_at</span>)
   <span class="ruby-ivar">@reservation</span> = <span class="ruby-identifier">cat</span>.<span class="ruby-identifier">reservations</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">reservation_params</span>)
   
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@reservation</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-comment"># Send confiramtion email on successful booking</span>
     <span class="ruby-constant">ReservationMailer</span>.<span class="ruby-identifier">confirmation_email</span>(<span class="ruby-ivar">@reservation</span>).<span class="ruby-identifier">deliver_later</span>
+    
     <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">notice</span> = <span class="ruby-string">&quot;Check your email for your reservation info!&quot;</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">cat</span>
   <span class="ruby-keyword">else</span>
-    <span class="ruby-comment"># Render &quot;new&quot; template:</span>
     <span class="ruby-identifier">render</span> <span class="ruby-value">:new</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
@@ -167,13 +167,13 @@
 
         <div class="method-description">
           
-          
+          <p>Render new reservation template</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/reservations_controller.rb, line 2</span>
+            <pre><span class="ruby-comment"># File app/controllers/reservations_controller.rb, line 3</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@cat</span> = <span class="ruby-constant">Cat</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:cat_id</span>])
   <span class="ruby-ivar">@reservation</span> = <span class="ruby-ivar">@cat</span>.<span class="ruby-identifier">reservations</span>.<span class="ruby-identifier">new</span>

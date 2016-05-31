@@ -87,8 +87,6 @@
 
   <section class="description">
     
-<p>test comment</p>
-
   </section>
 
   
@@ -123,13 +121,13 @@
 
         <div class="method-description">
           
-          
+          <p>Compute open time slots for cat reservation</p>
           
           
 
           
           <div class="method-source-code" id="open_slots-source">
-            <pre><span class="ruby-comment"># File app/models/cat.rb, line 10</span>
+            <pre><span class="ruby-comment"># File app/models/cat.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">open_slots</span>(<span class="ruby-identifier">date</span>)
   <span class="ruby-identifier">time</span> = <span class="ruby-identifier">date</span>.<span class="ruby-identifier">to_time</span>
   
@@ -146,6 +144,7 @@
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
   
+  <span class="ruby-comment"># Remove taken/past timeframes</span>
   <span class="ruby-identifier">slots</span>.<span class="ruby-identifier">reject</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">slot</span><span class="ruby-operator">|</span>
     <span class="ruby-constant">Reservation</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">cat</span><span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>, <span class="ruby-identifier">starts_at</span><span class="ruby-operator">:</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">starts_at</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">starts_at</span>.<span class="ruby-identifier">past?</span>
   <span class="ruby-keyword">end</span>
@@ -173,13 +172,13 @@
 
         <div class="method-description">
           
-          
+          <p>Render open time slots</p>
           
           
 
           
           <div class="method-source-code" id="open_slots_for_select-source">
-            <pre><span class="ruby-comment"># File app/models/cat.rb, line 31</span>
+            <pre><span class="ruby-comment"># File app/models/cat.rb, line 34</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">open_slots_for_select</span>(<span class="ruby-identifier">date</span>)
   <span class="ruby-identifier">open_slots</span>(<span class="ruby-identifier">date</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">slot</span><span class="ruby-operator">|</span>
     [<span class="ruby-node">&quot;#{slot.starts_at.strftime(&#39;%d/%m/%Y, %H:%M &#39;)}&quot;</span>, <span class="ruby-identifier">slot</span>.<span class="ruby-identifier">starts_at</span>]

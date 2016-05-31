@@ -119,13 +119,13 @@
 
         <div class="method-description">
           
-          
+          <p>Render “Comic of the Week” service</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 2</span>
+            <pre><span class="ruby-comment"># File app/controllers/welcome_controller.rb, line 3</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@comic</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;http://xkcd.com/info.0.json&quot;</span>))
 <span class="ruby-keyword">end</span></pre>
