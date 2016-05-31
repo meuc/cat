@@ -20,7 +20,17 @@
 			  Unknown
 			<% end %>
 		</p>
-		<p><b>Description:</b> <%= @cat.description %></p>
+		<p>
+			<b>Description:</b>
+			<% if @cat.description.present? %>
+				<%= @cat.description %>
+			<% else %>
+				No description
+			<% end %>
+		</p>
+		<% if @cat.description.present? %>
+			 <!--put back: link_to "Read description aloud", cat_audio_path(@cat), remote: true  -->
+		<% end %>
 	</div>
 
 </div>

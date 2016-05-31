@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'audios/show'
+
   root to: "welcome#index"
   
-  resources :cats, only: [:index, :show] do 
+  resources :cats, only: [:index, :show] do
+    resource :audio, only: [:show]
     resources :reservations, only: [:create, :new]
     resources :open_slots, only: [:show], param: :date
   end
