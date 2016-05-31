@@ -1,5 +1,5 @@
 class OpenSlotsController < ApplicationController
-  # Render currect available timeslots according to chosen cat and day
+  # Render correct available timeslots according to chosen cat and day
   def show
     cat = Cat.find(params[:cat_id])
     date = Date.parse(params[:date])

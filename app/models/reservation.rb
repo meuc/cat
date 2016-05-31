@@ -5,6 +5,7 @@ class Reservation < ActiveRecord::Base
   
   belongs_to :cat, required: true
   
+  # The time the reservation ends at
   def ends_at
     starts_at + DURATION
   end
