@@ -10,3 +10,4 @@ class Reservation < ActiveRecord::Base
     starts_at + DURATION
   end
 end
+

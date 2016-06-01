@@ -18,7 +18,6 @@ module Admin
       if @cat.save
         redirect_to @cat
       else
-        # Render "new" template:
         render :new
       end
     end
